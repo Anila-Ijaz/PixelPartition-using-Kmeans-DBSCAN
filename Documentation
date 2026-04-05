@@ -1,0 +1,32 @@
+##Introduction:
+Clustering is an unsupervised learning technique that can be used for grouping data points
+according to similarities found on various features. In this assignment, two types of
+unsupervised learning, K-Means and DBSCAN, would be implemented from scratch and would
+be used for image segmentation, where each point on an image would be considered an
+individual data point, and points that share similarities would be clustered together.
+The implementations are generally applicable, they can be used with arbitrary vectors, not
+necessarily images, and can handle arbitrary dimensions within the vector features. Moreover, it
+was implemented such that the user can select one of three different distances: Euclidean,
+Manhattan, or Maximum.
+Commands:
+##K-Means CLI Command:
+python MainFile_Task1.py --algo kmeans --input giraffe.png --output out_kmean.png --k 4
+--metric euclidean --resize 200
+##DBSCAN CLI Command:
+python MainFile_Task1.py --algo dbscan --input giraffe.png --output out_dbscan_eu2.png --eps
+6 --min-samples 30 --metric euclidean --resize 200
+##Experiment:
+The performance of both algorithms was validated on an RGB image. In this case, each pixel
+was represented as a feature vector with dimensions equal to 3. In a real-world scenario to
+minimize computational complexity, image resizing takes place. Different distance
+measurements were used to check their influence on image segmentation quality.
+The output of K-Means resulted in a clean and smooth segment when an appropriate k value is
+used.DBSCAN successfully located regions of high density colors and was immune to noisy
+pixels but demanded precise control of eps and min samples.
+##Result & Conclusion:
+The experiments prove the efficiency of the implementation in terms of the successful
+segmentation of the images according to the similarity of the colors. K-Means is an algorithm
+that is simple, efficient, and effective when the number of clusters is given in advance. DBSCAN
+is also an efficient algorithm, which can also compute the number of clusters as well as handle
+the noisy points. Another important point is the choice of the appropriate distance measure
+through the command line interface
