@@ -1,0 +1,2 @@
+Kmean CLI: python MainFile_Task1.py --algo kmeans --input giraffe.png --output out_kmean.png --k 4 --metric euclidean --resize 200
+DBSCAN CLI: python MainFile_Task1.py --algo dbscan --input giraffe.png --output out_dbscan_eu2.png --eps 6 --min-samples 30 --metric euclidean --resize 200
